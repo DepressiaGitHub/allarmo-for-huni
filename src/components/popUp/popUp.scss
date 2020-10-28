@@ -1,0 +1,86 @@
+@import 'src/utils/utils.scss';
+
+.popUp {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 11;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+
+  &__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    opacity: 0.7;
+  }
+
+  &__body-fixer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    overflow: hidden;
+
+    &:before {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      width: 100%;
+      height: 100%;
+      content: '';
+    }
+  }
+
+  &__container {
+    position: relative;
+    z-index: 11;
+  }
+
+  &__close {
+    @include zero;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    z-index: 10;
+    width: 21px;
+    height: 21px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    @media(max-width: $tablet) {
+      top: 20px;
+    }
+
+    &:hover {
+
+      svg {
+        fill: $second-color;
+      }
+    }
+
+    &:focus {
+
+      svg {
+        fill: $second-color;
+      }
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+      background-color: #ffffff;
+      fill: $main-color;
+    }
+  }
+}

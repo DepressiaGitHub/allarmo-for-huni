@@ -1,0 +1,21 @@
+//- ОБРАЗЕЦ ФОРМЫ
+
+section.form.FORM-ID
+
+  section.form__content
+    h2 Заголовок
+    p И другой различный контент
+    form#FORM-ID
+      input.form__text(required type="text" minlength="3" maxlength="200" pattern="^[a-zA-ZА-Яа-яЁё-]+( [a-zA-ZА-Яа-яЁё]+)*$" name="name" placeholder="Ваше имя*")
+      input.form__text(required type="text" minlength="3" maxlength="200" pattern="^[a-zA-ZА-Яа-яЁё-]+( [a-zA-ZА-Яа-яЁё]+)*$" name="surname" placeholder="Ваша фамилия*")
+      input.form__phone.mask(required type="tel" name="phone" autocomplete="off" minlength="10" inputmode="tel" placeholder="Телефон*")
+      input.form__text(required type="email" minlength="3" maxlength="400" pattern="^\S*$" name="email" placeholder="E-mail*")
+      textarea.form__textarea(required type="text" minlength="3" maxlength="400" pattern="^[a-zA-ZА-Яа-яЁё0-9-!$%^&amp;*()_+|~=`{}[:;&lt;&gt;?,.@#№'&quot;]+( [a-zA-ZА-Яа-яЁё0-9-!$%^&amp;*()_+|~=`{}[:;&lt;&gt;?,.@#№'&quot;]+)*$" name="comment" placeholder="Комментарий")
+      button.form__submit(type="submit") Отправить
+    p Нажимая на кнопку “Оставить заявку”, вы подтверждаете свое согласие на обработку пользовательских данных
+      
+  section.form__greetings
+    h2 Спасибо, ваша заявка успешно отправлена.
+  section.form__fail
+    h2 Возникла ошибка, повторите попытку позже.
+    button.form__reset Вернуться к форме

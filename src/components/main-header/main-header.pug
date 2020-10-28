@@ -1,0 +1,12 @@
+header.main-header
+  div.main-container.main-header__wrapper
+    div
+      a.main-header__logo(href="#")
+        img(src="./assets/images/logo-header-desktop.svg" alt="Логотип «Allarmo»" width="163" height="30")
+      span.main-header__beta Beta
+    +button({
+      link: true,
+      buttonText: 'Войти',
+      secondClass: 'main-header__link',
+      href: '#'
+    })

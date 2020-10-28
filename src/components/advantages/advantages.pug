@@ -1,0 +1,40 @@
+section.advantages
+    h2.visually-hidden Почему Вам необходим «Allarmo»
+    div.advantages__needed
+        div.main-container--wider
+            div.advantages__top-wrapper
+                h2.advantages__title Кому нужен Allarmo
+                ul.advantages__list
+                    li.advantages__item
+                        img.advantages__img(src="./assets/images/item01-desktop@1x.png" srcset="./assets/images/item01-desktop@2x.png 2x" alt="Сумка - иконка интернет магазинов" width="129" height="130")
+                        h3.advantages__heading Интернет-магазинам -
+                        p оперативно сообщит о возникших проблемах на сайте, что позволит скорректировать или остановить рекламную кампанию.
+                    li.advantages__item
+                        img.advantages__img(src="./assets/images/item02-desktop@1x.png" srcset="./assets/images/item02-desktop@2x.png 2x" alt="Клавишы - иконка отдела разработки" width="130" height="130")
+                        h3.advantages__heading Отделу разработки -
+                        p позволит оперативно получать информацию о проблемах на сайте от реальных пользователей.
+                    li.advantages__item
+                        img.advantages__img(src="./assets/images/item03-desktop@1x.png" srcset="./assets/images/item03-desktop@2x.png 2x" alt="Маркер - иконка веб-студий" width="130" height="130")
+                        h3.advantages__heading Веб-студиям и продакшенам -
+                        p держать “руку на пульсе” клиентских проектов и оперативно реагировать на проблемы.
+    div.advantages__bottom-wrapper
+        div.main-container
+            div.advantages__container
+                p.advantages__slogan#free Испытайте сервис Allarmo, бесплатно!
+                form.advantages__form.registration-form.validator(action="#" method="post")
+                    div.advantages__input-wrapper
+                        input.advantages__input(type="text" id="user-name" name="user-name" aria-label="Фамилия, имя и отчество" placeholder="ФИО" minlength="6" maxlength="32" autocomplete="off" autocapitalize="off" required)
+                    div.advantages__input-wrapper
+                        input.advantages__input.mask(type="tel" id="user-telphone" name="user-telphone" aria-label="Мобильный телефон" placeholder="Телефон" autocomplete="off" autocapitalize="off" required)
+                    div.advantages__input-wrapper
+                        input.advantages__input(type="url" id="user-url" name="user-url" aria-label="Адресс сайта" placeholder="Адресс сайта" maxlength="32" minlength="6" autocomplete="off" autocapitalize="off" required)
+                    div.advantages__input-wrapper
+                        input.advantages__input(type="email" id="user-email" name="user-email" aria-label="Электронная почта" placeholder="E-mail" maxlength="32" minlength="6" autocomplete="off" autocapitalize="off" required)
+                    div.advantages__checkbox
+                        input.visually-hidden(id="accept-info" type="checkbox")
+                        label(for="accept-info") Согласие на обработку персональных данных.
+                    +button({
+                        button: true,
+                        buttonText: 'Подключиться бесплатно',
+                        secondClass: 'advantages__button'
+                    })

@@ -1,0 +1,16 @@
+@import 'src/utils/utils.scss';
+
+.firstHeader {
+  @include zero;
+  margin-bottom: 60px;
+  padding-top: 16px;
+  font-family: $main-font;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  color: $main-shade1;
+
+  &--registration {
+    margin-bottom: 28px;
+  }
+}

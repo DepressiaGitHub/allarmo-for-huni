@@ -1,0 +1,99 @@
+@import 'src/utils/utils.scss';
+
+.main-header {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  min-width: 320px;
+  padding: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  @media(max-width: $mobile) {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    & div {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  &__logo img {
+    @media(max-width: $mobile) {
+      width: 97px;
+      height: 18px;
+    }
+  }
+
+  &__beta {
+    margin-left: 15px;
+    padding-top: 6px;
+    padding-right: 11px;
+    padding-bottom: 6px;
+    padding-left: 11px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 14px;
+    color: $background1-color;
+    background-color: $main-color;
+
+    @media(max-width: $tablet) {
+      padding-top: 4px;
+      padding-right: 10px;
+      padding-bottom: 4px;
+      padding-left: 10px;
+      font-size: 12px;
+    }
+    @media(max-width: $mobile) {
+      margin-left: 8px;
+      padding-top: 1px;
+      padding-right: 8px;
+      padding-bottom: 1px;
+      padding-left: 8px;
+      border-radius: 7px;
+      font-size: 8px;
+    }
+  }
+
+  &__link {
+    padding-top: 13px;
+    padding-right: 33px;
+    padding-bottom: 13px;
+    padding-left: 33px;
+    border: 1px solid $main-color;
+    font-size: 16px;
+    color: 	$main-color;
+
+    @media(max-width: $tablet) {
+      padding-top: 10px;
+      padding-right: 25px;
+      padding-bottom: 10px;
+      padding-left: 25px;
+      font-size: 14px;
+    }
+    @media(max-width: $mobile) {
+      padding-top: 4px;
+      padding-right: 19px;
+      padding-bottom: 4px;
+      padding-left: 19px;
+      border-radius: 3px;
+      font-size: 12px;
+      border-width: 1px;
+    }
+
+    &:hover,
+    &:focus {
+      color: $background1-color;
+      background-color: $main-color;
+    }
+  }
+}

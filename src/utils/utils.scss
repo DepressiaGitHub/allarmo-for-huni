@@ -1,0 +1,21 @@
+/* stylelint-disable */
+@mixin zero {
+  padding: 0;
+  margin: 0;
+}
+
+$main-font: 'Open Sans', Arial, serif;
+
+$main-color: #ffffff;
+$background1-color: #ff7b1b;
+$card-color: #161c1f;
+$background2-color: #10181b;
+$background3-color: #ff710a;
+
+$tablet: 1299px;
+$mobile: 800px;
+
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
+
+/* stylelint-enable */

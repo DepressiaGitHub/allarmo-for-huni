@@ -1,0 +1,22 @@
+// образец обработки формы
+
+const FORMNAME = document.querySelector('FORMNAME');
+FORMNAME.addEventListener('submit', function send(form) {
+  form.preventDefault();
+  const submitButton = FORMNAME.querySelector('button[type="submit"]');
+  submitButton.setAttribute('disabled', 'disabled');
+
+  const url = '/forms/forms.php?type=request_from_to';
+  const formData = new FormData(this);
+  /* eslint-disable */
+  const succsessFunctions = [
+    () => {   console.log('succsess1') },
+    () => {   console.log('succsess2') },
+  ];
+  const failFunctions = [
+    () => {   console.log('fail1') },
+    () => {   console.log('fail2') },
+  ];
+  /* eslint-enable */
+  sendForm(url, formData, succsessFunctions, failFunctions);
+});

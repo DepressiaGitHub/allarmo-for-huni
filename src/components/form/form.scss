@@ -1,0 +1,84 @@
+@import 'src/utils/utils.scss';
+
+.form {
+  position: relative;
+  overflow: hidden;
+
+  @media(max-width: $phone) {
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    outline: none;
+
+    &:focus {
+      background-color: #eeeded;
+    }
+
+    &--invalid {
+      border: 1px solid #d20000 !important;
+    }
+
+    &--hidden {
+      display: none;
+    }
+  }
+
+  &__phone {
+    outline: none;
+
+    &:focus {
+      background-color: #eeeded;
+    }
+  }
+
+  &__password {
+    outline: none;
+
+    &:focus {
+      background-color: #eeeded;
+    }
+  }
+
+  &__content {
+    transition: 0.5s;
+
+    &--hidden {
+      transform: translateY(-120%);
+    }
+  }
+
+  &__greetings {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+    visibility: hidden;
+    transform: translateY(100%);
+  }
+
+  &__fail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+    visibility: hidden;
+    transform: translateY(100%);
+  }
+
+  &__visible {
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  &__reset {
+    display: block;
+    margin: 0 auto;
+  }
+}

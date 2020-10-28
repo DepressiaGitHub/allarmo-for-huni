@@ -1,0 +1,40 @@
+template#success
+    div.modal
+        div.modal__body
+            h3.modal__title Успешно!
+            p.modal__text Спасибо за регистрацию в «Allarmo».
+        div.modal__controls
+            +button({
+                button: true,
+                buttonText: 'Ок',
+                secondClass: 'modal__button modal__button--ok'
+            })
+        button.modal__close
+            span.visually-hidden Закрыть окно
+
+
+template#log-in
+    div.modal.modal--log-in
+        div.modal__body
+            h3.modal__title Войдите в свой аккаунт!
+            p.modal__text Введите свой логин и пароль.
+        div.modal__controls
+            form.modal__inputs.login-form(action="#", method="post")
+                div.modal__input-wrapper
+                    input.modal__input(type='text' id='user-login' maxlength="32" placeholder="Логин" required)
+                div.modal__input-wrapper 
+                    input.modal__input(type='password' id='user-password' maxlength="32" placeholder="Пароль" required)
+                div.modal__controls.modal__controls--flex
+                    div.modal__panel
+                        div.modal__checkbox
+                            input.visually-hidden(id="remeber-me" type="checkbox")
+                            label(for="remeber-me") Запомнить меня
+                        div.modal__remeber-me
+                            a.modal__link(href="#") Я забыл пароль
+                +button({
+                        button: true,
+                        buttonText: 'Войти',
+                        secondClass: 'modal__button modal__button--log-in'
+                    })
+        button.modal__close
+            span.visually-hidden Закрыть окно

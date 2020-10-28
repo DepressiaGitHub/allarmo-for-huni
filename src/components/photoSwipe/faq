@@ -1,0 +1,14 @@
+  // находим нужную галлерею
+  // const slides = document.querySelectorAll(`класс слайда`);
+
+  // вешаем обработчик на слайды
+  // slides.forEach((element, number) => {
+  //   element.addEventListener(`click`, (evt) => {
+  //     evt.preventDefault();
+  //     openPhotoSwipe(createSlide(slides), number);
+  //   })
+  // })
+
+
+  //- разметка для слайда
+  a.класс слайда(href="ссылка на большое изображение" width="640" height="900" style="background-image: url('ссылка на маленькое изображение')")

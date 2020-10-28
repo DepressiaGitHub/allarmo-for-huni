@@ -1,0 +1,19 @@
+section.main-promo
+    h2.visually-hidden Описание сервиса «Allarmo»
+    div.main-promo__wrapper
+        div.main-container.main-promo__container
+                div.main-promo__description
+                    p.main-promo__title Allarmo — cервис мониторинга проблем на сайте
+                    div.main-promo__connect
+                        p Allarmo следит за проблемами и ошибками на вашем сайте и сервере, а так же оперативно сообщает о выявленных проблемах.
+                        +button({
+                            link: true,
+                            buttonText: 'Подключиться бесплатно',
+                            secondClass: 'main-promo__link',
+                            href: '#free'
+                        })
+    div.main-promo__review
+        div.main-container
+            img.main-promo__desktop(src="./assets/images/pc-promo-desktop@1x.png" srcset="./assets/images/pc-promo-desktop@2x.png 2x" alt="Демонстрация сервиса «Allarmo» на компьютере" width="1004" height="609")
+            img.main-promo__mobile(src="./assets/images/mobile-promo-desktop@1x.png" srcset="./assets/images/mobile-promo-desktop@2x.png 2x" alt="Демонстрация сервиса «Allarmo» на мобильном" width="255" height="476")
+

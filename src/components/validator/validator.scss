@@ -1,0 +1,36 @@
+@import 'src/utils/utils.scss';
+
+.validator {
+
+  &__error {
+    position: absolute;
+    right: -20px;
+    bottom: -15px;
+    padding-top: 5px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    border: 1px solid $background2-color;
+    border-radius: 4px;
+    font-size: 12px;
+    color: $background2-color;
+    background-color: $main-color;
+
+    &:before {
+      position: absolute;
+      top: -5px;
+      left: 10px;
+      width: 9px;
+      height: 9px;
+      border-top: 1px solid $background2-color;
+      border-left: 1px solid $background2-color;
+      background-color: $main-color;
+      content: '';
+      transform: rotate(45deg);
+    }
+  }
+
+  &__input--error {
+    border: 2px solid #ff0000;
+  }
+}

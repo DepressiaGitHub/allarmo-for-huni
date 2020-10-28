@@ -1,0 +1,5 @@
+mixin button(props)
+    if props.button
+        button.button(class=props.secondClass type='submit')=props.buttonText
+    else if props.link
+        a.button(href=props.href class=props.secondClass)=props.buttonText
